@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { TextInput, View } from 'react-native';
+import { View, TextInput } from 'react-native';
 
 export const SearchBarWrapper = styled(View)`
   height: 50px;

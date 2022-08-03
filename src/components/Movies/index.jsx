@@ -9,7 +9,6 @@ import {
   SectionTitleWrapper,
 } from './styles';
 import SearchBar from '../SearchBar';
-import { useMovieStore } from '../../stores/useMoviesStore';
 
 const getDataSource = data => {
   var dataSource = [];
@@ -22,16 +21,12 @@ const getDataSource = data => {
 };
 
 const Movies = () => {
-  const markAsFavorite = useMovieStore(state => state.markAsFavorite);
-
   const [searchTerm, setSearchTerm] = useState(null);
   const { data, error, isError, isFetching, isLoading } = useFetchMovies();
   const {
     data: searchData,
     error: searchError,
     isError: isSearchError,
-    isFetching: isSearchFetching,
-    isLoading: isSearchLoading,
   } = useSearchMovie(searchTerm);
 
   const onChangeText = text => {
@@ -50,7 +45,7 @@ const Movies = () => {
     (searchTerm && searchData) || (!searchTerm && data) || [],
   );
 
-  if (isLoading || isFetching || isSearchLoading || isSearchFetching) {
+  if (isLoading || isFetching) {
     return <MessageWrapper testID='loader'> Loading ...!</MessageWrapper>;
   }
 

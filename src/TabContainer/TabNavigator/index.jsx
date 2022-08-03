@@ -10,7 +10,7 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
-        name='Movies'
+        name='Movie'
         component={TabStackNavigator}
         options={{
           tabBarLabel: () => null,

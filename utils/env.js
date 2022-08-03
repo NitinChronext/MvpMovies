@@ -1,3 +1,4 @@
+//TODO : check on env files why not working
 import { BASE_URL, SEARCH_URL } from '@env';
 
 export const base_url = 'https://wookie.codesubmit.io/movies';

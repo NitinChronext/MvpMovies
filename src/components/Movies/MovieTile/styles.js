@@ -34,3 +34,11 @@ export const Title = styled(Text)`
 export const Heart = styled(Image)`
   width: 30%;
 `;
+
+export const HeartIconWrapper = styled(TouchableOpacity)`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+`;
